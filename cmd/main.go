@@ -835,11 +835,11 @@ func refactorIndexGtmAcrum(doc *goquery.Document) {
 		gtmCode = ""
 		return
 	case "crypto":
-		gtmCode = "GTM-NMH3FZ4"
+		gtmCode = "CRYPTOCODE"
 	case "nutra":
-		gtmCode = "GTM-PCSKBGK"
+		gtmCode = "NUTRACODE"
 	case "adult":
-		gtmCode = "GTM-K5855JS"
+		gtmCode = "ADULTCODE"
 	}
 	if gtmCode != "" {
 		var gtmHead string = "<script>var acrum_extra = {land: \"\", lang: \"\", funnel: \"lp\", offer: \"\", project: \"" + gtmName + "\", comebacker: true}\n</script>\n <script>\n    (function (w, d, s, l, i) {\n        w[l] = w[l] || [];\n        w[l].push({\n            'gtm.start':\n                new Date().getTime(), event: 'gtm.js'\n        });\n        var f = d.getElementsByTagName(s)[0],\n            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';\n        j.async = true;\n        j.src =\n            'https://www.googletagmanager.com/gtm.js?id=' + i + dl;\n        f.parentNode.insertBefore(j, f);\n    })(window, document, 'script', 'dataLayer', '" + gtmCode + "');\n</script>"
